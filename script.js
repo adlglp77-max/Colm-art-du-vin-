@@ -1,0 +1,655 @@
+/* =========================
+   COLM'ART DU VIN - STYLE
+========================= */
+
+:root {
+  --wine: #8b1e3f;
+  --dark-wine: #5f1028;
+  --cream: #fff8ef;
+  --beige: #efe1d1;
+  --text: #1f1f1f;
+  --muted: #666;
+  --white: #ffffff;
+
+  --shadow:
+    0 18px 45px rgba(0,0,0,.12);
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  padding: 16px 7%;
+
+  background: rgba(255,248,239,.95);
+  backdrop-filter: blur(12px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 999;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+}
+
+/* ===== LOGO ===== */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  text-decoration: none;
+
+  color: var(--wine);
+
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* LOGO INTEGRÉ */
+
+.brand img {
+  width: 60px;
+  height: 60px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 3px solid rgba(139,30,63,.15);
+
+  background: white;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.12);
+
+  transition: .3s ease;
+}
+
+.brand:hover img {
+  transform: scale(1.05);
+}
+
+.brand span {
+  font-size: 18px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  text-decoration: none;
+
+  color: var(--text);
+
+  font-weight: 700;
+  font-size: 14px;
+
+  transition: .3s;
+}
+
+.nav a:hover {
+  color: var(--wine);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.header-btn,
+.btn,
+.product-link,
+.contact-form button {
+  background: var(--wine);
+  color: white;
+
+  padding: 13px 24px;
+
+  border-radius: 999px;
+
+  border: none;
+
+  text-decoration: none;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.header-btn:hover,
+.btn:hover,
+.product-link:hover,
+.contact-form button:hover {
+  background: var(--dark-wine);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.45)),
+    url("https://www.troisfoisvin.com/wp-content/uploads/2022/03/pexels-martin-alargent-3861138-768x1024.jpg")
+    center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  padding: 140px 7% 80px;
+
+  color: white;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: #d99aaa;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  font-weight: 900;
+
+  margin-bottom: 14px;
+}
+
+.eyebrow.dark {
+  color: var(--wine);
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 82px);
+
+  line-height: 1;
+
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-size: 21px;
+
+  line-height: 1.7;
+
+  max-width: 640px;
+
+  margin-bottom: 34px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--wine);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 95px 7%;
+}
+
+.section h2 {
+  color: var(--wine);
+
+  font-size: clamp(32px, 4vw, 52px);
+
+  line-height: 1.1;
+
+  margin-bottom: 22px;
+}
+
+.section p {
+  color: var(--muted);
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+/* =========================
+   CONCEPT
+========================= */
+
+.concept-section {
+  background: white;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.concept-image img {
+  width: 100%;
+
+  height: 600px;
+
+  object-fit: cover;
+
+  border-radius: 32px;
+
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   TEAM
+========================= */
+
+.team-section {
+  background: var(--beige);
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.team-image img {
+  width: 100%;
+
+  height: 760px;
+
+  object-fit: cover;
+
+  border-radius: 32px;
+
+  box-shadow: var(--shadow);
+}
+
+.story-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-top: 35px;
+}
+
+.value-card {
+  background: var(--cream);
+
+  padding: 24px;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow: var(--shadow);
+}
+
+.value-card span {
+  font-size: 36px;
+}
+
+.value-card h3 {
+  color: var(--wine);
+
+  margin: 12px 0 8px;
+}
+
+.value-card p {
+  font-size: 14px;
+}
+
+/* =========================
+   COLMAR
+========================= */
+
+.colmar-section {
+  background: white;
+}
+
+.section-heading {
+  text-align: center;
+
+  max-width: 900px;
+
+  margin: 0 auto 45px;
+}
+
+.colmar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 26px;
+}
+
+.colmar-grid img {
+  width: 100%;
+
+  height: 420px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   BOUTIQUE
+========================= */
+
+.shop-section {
+  background: var(--cream);
+}
+
+.shop-story {
+  max-width: 950px;
+  margin: auto;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 26px;
+}
+
+.product-card {
+  background: white;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  box-shadow: var(--shadow);
+
+  transition: .3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-image {
+  height: 300px;
+
+  background: #f5f5f5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  padding: 18px;
+
+  transition: .45s;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.06);
+}
+
+.product-info {
+  padding: 26px;
+}
+
+.product-category {
+  color: var(--wine) !important;
+
+  font-size: 13px !important;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 8px;
+}
+
+.product-info h3 {
+  font-size: 28px;
+
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 15px;
+
+  margin-bottom: 20px;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  color: var(--wine);
+
+  font-size: 28px;
+
+  font-weight: 900;
+}
+
+.badge {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  background: var(--wine);
+
+  color: white;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  z-index: 2;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+  background:
+    linear-gradient(rgba(95,16,40,.9), rgba(95,16,40,.9)),
+    url("https://static.visit.alsace/wp-content/uploads/2019/01/thio-petite-venise-colmar-istock-sergey-dzyuba-1600x900.jpg")
+    center/cover no-repeat;
+
+  color: white;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  align-items: center;
+}
+
+.contact-section h2,
+.contact-section p {
+  color: white;
+}
+
+.contact-form {
+  background: white;
+
+  padding: 32px;
+
+  border-radius: 28px;
+
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+
+  border: 1px solid #ddd;
+
+  border-radius: 16px;
+
+  padding: 16px;
+
+  font-size: 16px;
+
+  font-family: inherit;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: #171717;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 26px 7%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+  .nav {
+    display: none;
+  }
+
+  .concept-section,
+  .team-container,
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .story-values,
+  .shop-grid,
+  .colmar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-image img,
+  .concept-image img {
+    height: 500px;
+  }
+}
+
+@media (max-width: 620px) {
+
+  .site-header {
+    padding: 14px 5%;
+  }
+
+  .brand span {
+    font-size: 13px;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  .hero {
+    padding: 130px 5% 70px;
+  }
+
+  .section {
+    padding: 70px 5%;
+  }
+
+  .team-image img,
+  .concept-image img,
+  .colmar-grid img {
+    height: 340px;
+  }
+
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand img {
+    width: 52px;
+    height: 52px;
+  }
+}
